@@ -94,7 +94,7 @@ def page(fname, title, desc, body, pid):
 <footer><div class="wrap">
 <div><nav data-block="footer-menu">{fnav}</nav>
 <div style="margin-top:8px">© 2026 Пилатес-студия «{SITE}» · Красносельский район, Санкт-Петербург</div>
-<div style="font-size:12px;margin-top:4px">Студия готовится к открытию. Сайт — учебный проект по дисциплине «Веб-аналитика»; заявки на сайте не сохраняются.</div></div>
+<div style="font-size:12px;margin-top:4px">Студия готовится к открытию. Сайт — учебный проект по дисциплине «Веб-аналитика»; заявки на сайте не сохраняются. Фотографии интерьера иллюстративные.</div></div>
 <div class="counters" data-block="counters">{LI}</div>
 </div></footer>
 <script src="main.js"></script>
@@ -116,7 +116,7 @@ PAGES['index.html'] = ('Пилатес на реформерах', 'Камерн
 <a class="btn ghost" href="classes.html" data-goal="hero_classes">Выбрать направление</a>
 </div>
 </div>
-<div class="art" data-block="hero-art">{REFORMER}</div>
+<div class="art photo" data-block="hero-art"><img src="img/studio-hall.jpg" alt="Зал студии: реформеры в бордово-кремовых тонах" width="678" height="452"></div>
 </section>
 <section data-block="benefits">
 <span class="eyebrow">Почему «Линия»</span>
@@ -182,6 +182,10 @@ PAGES['studio.html'] = ('О студии', 'О пилатес-студии «Л�
 <p class="lead">«Линия» — камерная студия пилатеса на реформерах для жителей юго-запада Петербурга.</p>
 <section data-block="about">
 <p>Мы сознательно ограничили зал четырьмя реформерами: так в группе остаётся время на каждого, а тренировки проходят спокойно и сосредоточенно. Пилатес на реформере помогает укрепить мышцы кора, улучшить осанку и подвижность суставов — нагрузку легко подобрать под любой уровень.</p>
+<div class="gallery" data-block="gallery">
+<figure class="wide"><img src="img/studio-hall.jpg" alt="Зал с реформерами" loading="lazy"><figcaption>Зал на четыре реформера</figcaption></figure>
+<figure><img src="img/studio-lockers.jpg" alt="Раздевалка с зеркалами и шкафчиками" loading="lazy"><figcaption>Раздевалка</figcaption></figure>
+</div>
 <h2>Что внутри</h2>
 <div class="grid">
 <div class="card"><h3>Зал</h3><p>Четыре профессиональных реформера, естественный свет, тихая музыка.</p></div>
@@ -242,6 +246,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 for f in ('style.css', 'main.js', 'favicon.svg'):
     shutil.copy(os.path.join(here, f), OUT)
 shutil.copytree(os.path.join(here, 'fonts'), os.path.join(OUT, 'fonts'), dirs_exist_ok=True)
+shutil.copytree(os.path.join(here, 'img'), os.path.join(OUT, 'img'), dirs_exist_ok=True)
 open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\n')
 open(os.path.join(OUT, '.nojekyll'), 'w').write('')
 print('built', len(PAGES), 'pages ->', os.path.abspath(OUT), '| TOP100:', TOP100_ID, '| TMR:', TMR_ID)
