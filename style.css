@@ -8,28 +8,28 @@
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--ink:#2b2a27;--muted:#6f6a60;--bg:#f6f1ea;--card:#fffdf9;--line:#e4dccf;--sage:#7d8f72;--sage-d:#5f7056;--clay:#c98b6b;--soft:#ece4d7}
+:root{--ink:#2a1a1b;--muted:#7a6766;--bg:#f8f4f0;--card:#ffffff;--line:#e8dedb;--sage:#8e2230;--sage-d:#6a121a;--clay:#9e2a35;--soft:#f1e6e3;--silver:#bdb9b3}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font:17px/1.65 "Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.1}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;color:var(--sage-d);letter-spacing:-.01em;line-height:1.1}
 a{color:var(--sage-d)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header.top{background:rgba(246,241,234,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header.top{background:rgba(248,244,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:68px;flex-wrap:wrap}
-.logo{font-family:"Cormorant Garamond",Georgia,serif;font-size:28px;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.08em}
+.logo{font-family:"Cormorant Garamond",Georgia,serif;font-size:28px;font-weight:600;color:var(--sage-d);text-decoration:none;letter-spacing:.08em}
 .logo small{font-family:"Manrope",sans-serif;font-size:11px;letter-spacing:.3em;color:var(--sage-d);margin-left:6px;text-transform:uppercase}
 nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:15px;white-space:nowrap}
 nav a.on,nav a:hover{color:var(--ink)}
 nav a.on{border-bottom:1.5px solid var(--clay)}
 .btn{display:inline-block;background:var(--sage-d);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:999px;border:0;font:600 16px "Manrope",sans-serif;cursor:pointer}
-.btn:hover{background:#4f5f47}
+.btn:hover{background:#8e2230}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 56px}
 .hero h1{font-size:clamp(40px,6vw,68px);margin:0 0 18px}
 .hero p{font-size:19px;color:var(--muted);margin:0 0 30px;max-width:520px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.art{background:var(--soft);border-radius:200px 200px 24px 24px;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.art{background:var(--soft);border:1px solid var(--line);border-radius:200px 200px 24px 24px;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
 .art svg{width:100%;height:auto}
 .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);font-weight:700;margin-bottom:12px;display:block}
 section{padding:24px 0 40px}
@@ -40,14 +40,14 @@ section h2{font-size:clamp(30px,4vw,44px);margin:0 0 20px}
 .card p{color:var(--muted);margin:0 0 10px;font-size:15.5px}
 .card .meta{font-size:13px;color:var(--sage-d);font-weight:700;letter-spacing:.04em}
 .price{font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:600;margin:6px 0}
-.card.feat{background:var(--sage-d);color:#fff;border-color:var(--sage-d)}
-.card.feat p,.card.feat .meta{color:#e6ece1}
+.card.feat{background:var(--sage-d);color:#fff;border-color:var(--sage-d)}.card.feat h3,.card.feat .price{color:#fff}
+.card.feat p,.card.feat .meta{color:#f3dcdc}
 .page h1{font-size:clamp(38px,5vw,56px);margin:48px 0 10px}
 .lead{font-size:19px;color:var(--muted);max-width:720px}
 table.sch{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;font-size:15px}
 .tablewrap{overflow-x:auto;margin:24px 0}
 table.sch th,table.sch td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
-table.sch th{background:var(--ink);color:#fff;font-weight:600}
+table.sch th{background:var(--sage-d);color:#fff;font-weight:600}
 .tag{display:inline-block;padding:2px 10px;border-radius:999px;background:var(--soft);font-size:13px}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
 summary{font-weight:700;cursor:pointer}
@@ -59,7 +59,7 @@ form.fb input,form.fb select,form.fb textarea{width:100%;padding:12px;border:1px
 .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .steps div{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
 .steps div::before{content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-size:40px;color:var(--clay);display:block}
-footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;margin-top:40px}
+footer{border-top:3px solid var(--sage-d);background:#fff;padding:30px 0;color:var(--muted);font-size:14px;margin-top:40px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 footer nav a{margin:0 14px 0 0}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:36px}.art{max-width:360px}header.top nav{display:flex;flex-wrap:wrap;gap:4px 14px;padding-bottom:10px}nav a{margin:0}header.top{position:static}}
