@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Главная — Метрика без магии</title>
+<meta name="description" content="Понятный справочник по веб-аналитике: метрики, счётчики статистики, чек-лист установки и тест.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<!-- Sber Ads (Top100): вставьте ID проекта в build.py -->
+<!-- MyTracker: вставьте ID счётчика в build.py -->
+</head>
+<body id="p-home" data-tmr="MYTRACKER_COUNTER_ID">
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html" data-block="logo"><i></i>Метрика без магии</a>
+<nav data-block="menu"><a href="index.html" class=on>Главная</a><a href="metrics.html">Глоссарий</a><a href="counters.html">Счётчики</a><a href="checklist.html">Чек-лист</a><a href="quiz.html">Тест</a><a href="about.html">О проекте</a><a href="contact.html">Связь</a></nav>
+</div></header>
+<main class="wrap">
+
+<section class="hero" data-block="hero">
+<span class="tag">Справочник для студентов и начинающих маркетологов</span>
+<h1>Веб-аналитика без магии: метрики, счётчики и как их читать</h1>
+<p>Коротко и по делу объясняем, чем визит отличается от посетителя, какой счётчик статистики поставить на сайт и как проверить, что он работает.</p>
+<a class="btn" href="metrics.html" data-goal="hero_glossary">Открыть глоссарий</a>
+<a class="btn ghost" href="quiz.html" data-goal="hero_quiz">Проверить себя</a>
+</section>
+<section class="grid" data-block="sections">
+<div class="card"><span class="tag">Глоссарий</span><h3>20 ключевых метрик</h3><p>Посетители, визиты, отказы, глубина, конверсия — с примерами расчёта.</p><a href="metrics.html">Читать →</a></div>
+<div class="card"><span class="tag">Сравнение</span><h3>Счётчики статистики</h3><p>Яндекс Метрика, LiveInternet, Sber Ads, MyTracker и лог-анализаторы в одной таблице.</p><a href="counters.html">Сравнить →</a></div>
+<div class="card"><span class="tag">Практика</span><h3>Чек-лист установки</h3><p>10 шагов от регистрации до проверки, что данные действительно приходят.</p><a href="checklist.html">К чек-листу →</a></div>
+<div class="card"><span class="tag">Тест</span><h3>8 вопросов</h3><p>Проверьте, отличите ли вы просмотр от визита и цель от события.</p><a href="quiz.html">Пройти тест →</a></div>
+</section>
+<section data-block="why">
+<h2>Зачем это всё</h2>
+<p>Сайт без статистики похож на магазин без кассы: непонятно, кто пришёл, что посмотрел и почему ушёл. Счётчики собирают данные, а метрики превращают их в ответы: какие страницы читают, откуда приходят люди и какие действия они совершают. Этот справочник собран, чтобы разобраться в основах за один вечер.</p>
+</section>
+
+</main>
+<footer><div class="wrap">
+<div><nav data-block="footer-menu"><a href="index.html">Главная</a><a href="metrics.html">Глоссарий</a><a href="counters.html">Счётчики</a><a href="checklist.html">Чек-лист</a><a href="quiz.html">Тест</a><a href="about.html">О проекте</a><a href="contact.html">Связь</a></nav><div style="margin-top:8px">© 2026 «Метрика без магии» — учебный справочник по веб-аналитике</div></div>
+<div class="counters" data-block="counters"><!--LiveInternet counter--><a href="https://www.liveinternet.ru/click" target="_blank"><img id="licnt" width="88" height="31" style="border:0" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/></a><script>(function(d,s){d.getElementById("licnt").src=
+"https://counter.yadro.ru/hit?t14.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet--></div>
+</div></footer>
+<script src="main.js"></script>
+</body>
+</html>
