@@ -5,7 +5,7 @@ import os, sys
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
-TOP100_ID = os.environ.get('TOP100_ID', '7753233')   # ID проекта Sber Ads (Топ-100)
+TOP100_ID = os.environ.get('TOP100_ID', '7753235')   # ID проекта Sber Ads (Топ-100)
 TMR_ID = os.environ.get('TMR_ID', '3808235')        # ID счётчика MyTracker (Top.Mail.Ru)
 LI_TYPE = os.environ.get('LI_TYPE', 't14.6')                     # тип кнопки LiveInternet
 
