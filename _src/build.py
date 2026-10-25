@@ -5,17 +5,22 @@ import os, sys
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
-TOP100_ID = os.environ.get('TOP100_ID', 'TOP100_PROJECT_ID')   # ID проекта Sber Ads (Топ-100)
+TOP100_ID = os.environ.get('TOP100_ID', '7753233')   # ID проекта Sber Ads (Топ-100)
 TMR_ID = os.environ.get('TMR_ID', '3808235')        # ID счётчика MyTracker (Top.Mail.Ru)
 LI_TYPE = os.environ.get('LI_TYPE', 't14.6')                     # тип кнопки LiveInternet
 
 SITE = 'Линия'
 
-TOP100 = f'''<!-- Sber Ads (Top100) counter -->
+TOP100 = f'''<!-- Top100 (Kraken) Counter / Sber Ads -->
 <script>
 (function (w, d, c) {{
 (w[c] = w[c] || []).push(function() {{
-    var options = {{ project: {TOP100_ID} }};
+    var options = {{
+        project: {TOP100_ID},
+        attributes_dataset: [ "block" ],
+        trackHashes: true,
+        user_id: null,
+    }};
     try {{ w.top100Counter = new top100(options); }} catch(e) {{ }}
 }});
 var n = d.getElementsByTagName("script")[0],
@@ -27,7 +32,7 @@ if (w.opera == "[object Opera]") {{ d.addEventListener("DOMContentLoaded", f, fa
 }})(window, document, "_top100q");
 </script>
 <noscript><img src="//counter.rambler.ru/top100.cnt?pid={TOP100_ID}" alt="Топ-100" style="position:absolute;left:-9999px"></noscript>
-<!-- /Sber Ads (Top100) counter -->''' if TOP100_ID.isdigit() else '<!-- Sber Ads (Top100): вставьте ID проекта в build.py -->'
+<!-- END Top100 (Kraken) Counter -->''' if TOP100_ID.isdigit() else '<!-- Sber Ads (Top100): вставьте ID проекта в build.py -->'
 
 TMR = f'''<!-- Top.Mail.Ru / MyTracker counter -->
 <script>
