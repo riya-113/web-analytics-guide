@@ -100,7 +100,7 @@ def page(fname, title, desc, body, pid):
 <div><nav data-block="footer-menu">{fnav}</nav>
 <div style="margin-top:8px">© 2026 Пилатес-студия «{SITE}» · Красносельский район, Санкт-Петербург</div>
 <div style="font-size:12px;margin-top:4px">Студия готовится к открытию. Сайт — учебный проект по дисциплине «Веб-аналитика»; заявки на сайте не сохраняются. Фотографии интерьера иллюстративные.</div></div>
-<div class="counters" data-block="counters">{LI}</div>
+<div class="counters" data-block="counters">{LI}<a class="top100-badge" href="https://top100.rambler.ru/" target="_blank" rel="noopener" title="Рейтинг Топ-100 — Статистика от SberAds"><span>ТОП</span><b>100</b></a></div>
 </div></footer>
 <script src="main.js"></script>
 </body>

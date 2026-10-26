@@ -85,3 +85,8 @@ footer nav a{margin:0 14px 0 0}
 .gallery figure:hover img{transform:scale(1.03)}
 .gallery figcaption{position:absolute;left:14px;bottom:12px;background:rgba(255,255,255,.88);color:var(--sage-d);font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px}
 @media(max-width:760px){.gallery{grid-template-columns:1fr}}
+
+.counters{display:flex;gap:8px;align-items:center}
+.top100-badge{display:inline-flex;align-items:center;gap:3px;height:31px;padding:0 8px;border:1px solid #c9c2bd;border-radius:4px;background:#fff;text-decoration:none;font:700 11px/1 "Manrope",Arial,sans-serif;color:#21a038}
+.top100-badge span{color:#333;font-weight:600}
+.top100-badge b{color:#21a038;font-size:14px}
