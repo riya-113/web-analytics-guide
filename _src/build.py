@@ -49,12 +49,17 @@ _tmr.push({{id: "{TMR_ID}", type: "pageView", start: (new Date()).getTime()}});
 <noscript><div><img src="https://top-fwz1.mail.ru/counter?id={TMR_ID};js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru"></div></noscript>
 <!-- /Top.Mail.Ru / MyTracker counter -->''' if TMR_ID.isdigit() else '<!-- MyTracker: вставьте ID счётчика в build.py -->'
 
-LI = f'''<!--LiveInternet counter--><a href="https://www.liveinternet.ru/click" target="_blank"><img id="licnt" width="88" height="31" style="border:0" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/></a><script>(function(d,s){{d.getElementById("licnt").src=
-"https://counter.yadro.ru/hit?{LI_TYPE};r"+escape(d.referrer)+
-((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
-(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
-";h"+escape(d.title.substring(0,150))+";"+Math.random()}})
-(document,screen)</script><!--/LiveInternet-->'''
+LI_HIT = """<!--LiveInternet counter--><script>
+new Image().src = "https://counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+
+";"+Math.random();</script><!--/LiveInternet-->"""
+LI = """<!--LiveInternet logo--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img src="https://counter.yadro.ru/logo?23.6"
+title="LiveInternet: показано число посетителей за сегодня"
+alt="" style="border:0" width="88" height="15"/></a><!--/LiveInternet-->"""
 
 NAV = [('index.html', 'Главная'), ('classes.html', 'Направления'), ('schedule.html', 'Расписание'),
        ('prices.html', 'Цены'), ('studio.html', 'О студии'), ('faq.html', 'Вопросы'), ('booking.html', 'Запись')]
@@ -89,6 +94,7 @@ def page(fname, title, desc, body, pid):
 {TMR}
 </head>
 <body id="p-{pid}" data-tmr="{TMR_ID}">
+{LI_HIT}
 <header class="top"><div class="wrap">
 <a class="logo" href="index.html" data-block="logo">ЛИНИЯ<small>pilates</small></a>
 <nav data-block="menu">{nav}</nav>
